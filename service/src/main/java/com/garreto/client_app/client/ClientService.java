@@ -1,6 +1,7 @@
 package com.garreto.client_app.client;
 
 import com.garreto.client_app.client.models.Client;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class ClientService {
 
+    @Autowired
     private ClientRepository clientRepository;
 
     public List<Client> findClients() {
